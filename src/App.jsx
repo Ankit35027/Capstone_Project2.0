@@ -8,6 +8,8 @@ import { SignIn } from './pages/SignIn';
 import { UserProvider } from './contexts/UserContext';
 import { Navbar } from './components/Navbar';
 import { SignUp } from './pages/SignUp';
+import { Dashboard } from './pages/Dashboard';
+import { PrivateRoute } from './components/PrivateRoute';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -22,6 +24,14 @@ function App() {
             <Route path="/" element={<LandingPage />} />
             <Route path="/signin" element={<SignIn />} />
             <Route path="/signup" element={<SignUp />} />
+            <Route
+              path="/dashboard"
+              element={
+                <PrivateRoute>
+                  <Dashboard />
+                </PrivateRoute>
+              }
+            />
             </Routes>
         </div>
     </UserProvider>
