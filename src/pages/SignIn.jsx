@@ -20,7 +20,6 @@ export const SignIn = () => {
       return;
     }
 
-    // Check if user exists in localStorage
     const users = JSON.parse(localStorage.getItem('workoutUsers') || '[]');
     const user = users.find((u) => u.email === email && u.password === password);
 

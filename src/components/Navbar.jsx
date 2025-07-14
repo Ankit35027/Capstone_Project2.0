@@ -8,6 +8,7 @@ export const Navbar = () => {
   const location = useLocation();
   const navigate = useNavigate();
 
+  
   if (!isAuthenticated) return null;
 
   const handleLogout = () => {
@@ -32,10 +33,12 @@ export const Navbar = () => {
               <span className="ml-2 text-xl font-bold text-gray-900">FitBuddy</span>
             </div>
             <div className="hidden md:ml-6 md:flex md:space-x-8">
+              
               {navItems.map(({ path, label, icon: Icon }) => (
                 <Link
                   key={path}
                   to={path}
+                  
                   className={`inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium transition-colors duration-200 ${
                     location.pathname === path
                       ? 'border-blue-500 text-blue-600'
@@ -49,7 +52,9 @@ export const Navbar = () => {
             </div>
           </div>
           <div className="flex items-center space-x-4">
+            
             <span className="text-sm text-gray-700">Welcome, {user?.name}</span>
+            
             <button
               onClick={handleLogout}
               className="inline-flex items-center px-3 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-red-600 hover:bg-red-700 transition-colors duration-200"
