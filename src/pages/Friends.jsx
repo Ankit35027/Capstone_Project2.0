@@ -101,9 +101,12 @@ export const Friends = () => {
           <p className="text-gray-400">Start building your fitness community by adding buddies!</p>
         </div>
       ) : (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+       
+       
+       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {friends.map((friend) => (
-            <div key={friend.id} className="bg-white rounded-lg shadow-md p-6 border border-gray-200 hover:shadow-lg transition-shadow duration-200">
+            <div key={friend.id} className="bg-white rounded-lg shadow-md p-6 border border-gray-200 hover:shadow-lg transition-shadow duration-200" 
+            >
               <div className="flex items-center mb-4">
                 <img
                   src={friend.avatar}
@@ -130,7 +133,7 @@ export const Friends = () => {
                   onClick={() => removeFriend(friend.id)}
                   className="px-3 py-2 border border-red-300 text-sm font-medium rounded-md text-red-700 bg-red-50 hover:bg-red-100 transition-colors duration-200"
                 >
-                  <Trash2 className="h-4 w-4" />
+                  <Trash2 className="h-4 w-4"  />
                 </button>
               </div>
             </div>
