@@ -11,6 +11,7 @@ import { SignUp } from './pages/SignUp';
 import { Dashboard } from './pages/Dashboard';
 import { PrivateRoute } from './components/PrivateRoute';
 import { Friends } from './pages/Friends';
+import { Challenges } from './pages/Challenges';
 
 function App() {
   const [count, setCount] = useState(0)
