@@ -41,6 +41,14 @@ function App() {
                 </PrivateRoute>
               }
             />
+            <Route
+              path="/challenges"
+              element={
+                <PrivateRoute>
+                  <Challenges />
+                </PrivateRoute>
+              }
+            />
             </Routes>
         </div>
     </UserProvider>
