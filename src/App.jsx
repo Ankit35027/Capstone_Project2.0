@@ -12,6 +12,7 @@ import { Dashboard } from './pages/Dashboard';
 import { PrivateRoute } from './components/PrivateRoute';
 import { Friends } from './pages/Friends';
 import { Challenges } from './pages/Challenges';
+import { Profile } from './pages/Profile';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -47,6 +48,14 @@ function App() {
               element={
                 <PrivateRoute>
                   <Challenges />
+                </PrivateRoute>
+              }
+            />
+            <Route
+              path="/profile"
+              element={
+                <PrivateRoute>
+                  <Profile />
                 </PrivateRoute>
               }
             />
